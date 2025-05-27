@@ -1,0 +1,401 @@
+¡Claro! Aquí tienes una versión mejorada del formulario con **más preguntas** y **diferentes tipos de respuestas** (como texto, opciones, fechas, selección múltiple, etc.), como me pediste. El diseño sigue siendo el mismo, pero con un formulario mucho más completo.
+
+### Código Completo para la Página Final de la Academia de Baile con un Formulario Extendido:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Academia de Danza - Página Final</title>
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Tables section */
+        .tables-section {
+            margin: 50px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        /* Form Section */
+        .form-section {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="date"],
+        form select,
+        form textarea,
+        form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="checkbox"],
+        form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        form button {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #d35400;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Academia de Danza</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Cursos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tables Section -->
+    <section class="tables-section">
+      <div class="container">
+            <h2>Horarios de Clases</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Horario</th>
+                        <th>Días</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baile Clásico</td>
+                        <td>10:00 AM - 12:00 PM</td>
+                        <td>Lunes, Miércoles, Viernes</td>
+                    </tr>
+                    <tr>
+                        <td>Hip Hop</td>
+                        <td>5:00 PM - 7:00 PM</td>
+                        <td>Martes, Jueves</td>
+                    </tr>
+                    <tr>
+                        <td>Baile Contemporáneo</td>
+                        <td>6:00 PM - 8:00 PM</td>
+                        <td>Lunes, Miércoles</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Precios de los Cursos</h2>
+        <table>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baile Clásico</td>
+                        <td>$200/mes</td>
+                    </tr>
+                    <tr>
+                        <td>Hip Hop</td>
+                        <td>$180/mes</td>
+                    </tr>
+                    <tr>
+                        <td>Baile Contemporáneo</td>
+                        <td>$220/mes</td>
+                    </tr>
+                </tbody>
+          </table>
+            <p>&nbsp;</p>
+        </div>
+    </section>
+<form action="#" method="post">
+    <!-- 1. Nombre Completo -->
+    <label for="nombre">Nombre Completo:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <!-- 2. Correo Electrónico -->
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- 3. Teléfono -->
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required><br><br>
+
+    <!-- 4. Fecha de Nacimiento -->
+    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+    <!-- 5. Dirección -->
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required><br><br>
+
+    <!-- 6. Género -->
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select><br><br>
+
+    <!-- 7. Curso de Interés -->
+    <label for="curso">Curso de Interés:</label>
+    <select id="curso" name="curso" required>
+        <option value="clasico">Baile Clásico</option>
+        <option value="hiphop">Hip Hop</option>
+        <option value="contemporaneo">Baile Contemporáneo</option>
+        <option value="salsa">Salsa</option>
+        <option value="bachata">Bachata</option>
+    </select><br><br>
+
+    <!-- 8. Nivel de Experiencia en Danza -->
+    <label for="experiencia">Nivel de Experiencia en Danza:</label>
+    <select id="experiencia" name="experiencia" required>
+        <option value="principiante">Principiante</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+    </select><br><br>
+
+    <!-- 9. ¿Cómo te enteraste de nosotros? -->
+    <label for="fuente">¿Cómo te enteraste de nosotros?</label><br>
+    <input type="radio" id="internet" name="fuente" value="internet"> <label for="internet">Internet</label><br>
+    <input type="radio" id="boca" name="fuente" value="boca_a_boca"> <label for="boca">Boca a boca</label><br>
+    <input type="radio" id="publicidad" name="fuente" value="publicidad"> <label for="publicidad">Publicidad</label><br><br>
+
+    <!-- 10. ¿Has tomado clases de danza antes? -->
+    <label for="experiencia_danza">¿Has tomado clases de danza antes?</label><br>
+    <input type="checkbox" id="si_danza" name="experiencia_danza" value="si"> <label for="si_danza">Sí</label><br>
+    <input type="checkbox" id="no_danza" name="experiencia_danza" value="no"> <label for="no_danza">No</label><br><br>
+
+    <!-- 11. ¿Por qué deseas aprender a bailar? -->
+    <label for="motivacion">¿Por qué deseas aprender a bailar?</label><br>
+    <textarea id="motivacion" name="motivacion" rows="4" placeholder="Escribe tu motivación aquí..." required></textarea><br><br>
+
+    <!-- 12. ¿Cuántas veces a la semana te gustaría tomar clases? -->
+    <label for="frecuencia">¿Cuántas veces a la semana te gustaría tomar clases?</label>
+    <input type="number" id="frecuencia" name="frecuencia" min="1" max="7" required><br><br>
+
+    <!-- 13. Días de la semana preferidos para las clases -->
+    <label for="dias">Días de la semana preferidos para las clases (puedes seleccionar más de uno):</label><br>
+    <input type="checkbox" id="lunes" name="dias" value="lunes"> <label for="lunes">Lunes</label><br>
+    <input type="checkbox" id="martes" name="dias" value="martes"> <label for="martes">Martes</label><br>
+    <input type="checkbox" id="miercoles" name="dias" value="miercoles"> <label for="miercoles">Miércoles</label><br>
+    <input type="checkbox" id="jueves" name="dias" value="jueves"> <label for="jueves">Jueves</label><br>
+    <input type="checkbox" id="viernes" name="dias" value="viernes"> <label for="viernes">Viernes</label><br><br>
+
+    <!-- 14. ¿Qué otros tipos de danza te gustaría aprender? -->
+    <label for="otros_cursos">¿Qué otros tipos de danza te gustaría aprender?</label><br>
+    <input type="text" id="otros_cursos" name="otros_cursos" placeholder="Escribe aquí..."><br><br>
+
+    <!-- 15. ¿Tienes alguna restricción física para practicar danza? -->
+    <label for="restricciones">¿Tienes alguna restricción física para practicar danza?</label><br>
+    <input type="radio" id="si_restriccion" name="restricciones" value="si"> <label for="si_restriccion">Sí</label><br>
+    <input type="radio" id="no_restriccion" name="restricciones" value="no"> <label for="no_restriccion">No</label><br><br>
+
+    <!-- 16. Nivel de Compromiso con las Clases -->
+    <label for="compromiso">Nivel de Compromiso con las Clases:</label><br>
+    <input type="radio" id="bajo" name="compromiso" value="bajo"> <label for="bajo">Bajo</label><br>
+    <input type="radio" id="medio" name="compromiso" value="medio"> <label for="medio">Medio</label><br>
+    <input type="radio" id="alto" name="compromiso" value="alto"> <label for="alto">Alto</label><br><br>
+
+    <!-- 17. ¿Tienes alguna preferencia de instructor? -->
+    <label for="preferencia_instructor">¿Tienes alguna preferencia de instructor?</label><br>
+    <input type="text" id="preferencia_instructor" name="preferencia_instructor" placeholder="Escribe aquí..."><br><br>
+
+    <!-- 18. ¿Estás interesado en participar en presentaciones o concursos? -->
+    <label for="presentaciones">¿Estás interesado en participar en presentaciones o concursos?</label><br>
+    <input type="checkbox" id="si_presentacion" name="presentaciones" value="si"> <label for="si_presentacion">Sí</label><br>
+    <input type="checkbox" id="no_presentacion" name="presentaciones" value="no"> <label for="no_presentacion">No</label><br><br>
+
+    <!-- 19. ¿Te gustaría recibir notificaciones de eventos y promociones? -->
+    <label for="notificaciones">¿Te gustaría recibir notificaciones de eventos y promociones?</label><br>
+    <input type="checkbox" id="si_notificaciones" name="notificaciones" value="si"> <label for="si_notificaciones">Sí</label><br>
+    <input type="checkbox" id="no_notificaciones" name="notificaciones" value="no"> <label for="no_notificaciones">No</label><br><br>
+
+    <!-- 20. ¿Cuál es tu rango de edad? -->
+    <label for="edad">¿Cuál es tu rango de edad?</label><br>
+    <select id="edad" name="edad" required>
+        <option value="18_24">18-24 años</option>
+        <option value="25_34">25-34 años</option>
+        <option value="35_44">35-44 años</option>
+        <option value="45_54">45-54 años</option>
+        <option value="55_64">55-64 años</option>
+        <option value="65+">65 años o más</option>
+    </select><br><br>
+
+    <!-- 21. Comentarios adicionales -->
+    <label for="comentarios">Comentarios adicionales:</label><br>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe cualquier comentario aquí..."></textarea><
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="post">
+                <!-- Nombre -->
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <!-- Correo Electrónico -->
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Teléfono -->
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+
+                <!-- Fecha de Nacimiento -->
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+                <!-- Curso de Preferencia -->
+                <label for="curso">Curso de Interés:</label>
+                <select id="curso" name="curso" required>
+                    <option value="clasico">Baile Clásico</option>
+                    <option value="hiphop">Hip Hop</option>
+                    <option value="contemporaneo">Baile Contemporáneo</option>
+                </select>
+
+                <!-- Experiencia en Danza -->
+                <label for="experiencia">¿Tienes experiencia previa en danza?</label>
+                <input type="radio" id="si" name="experiencia" value="si"> <label for="si">Sí</label><br>
+                <input type="radio" id="no" name="experiencia" value="no" checked> <label for="no">No</label><br>
+
+                <!-- Motivación -->
+                <label for="motivacion">¿Por qué quieres tomar este curso?</label>
+                <textarea id="motivacion" name="motivacion" rows="4" required></textarea>
+
+                <!-- Nivel de Compromiso -->
+                <label for="compromiso">¿Cuál es tu nivel de compromiso con la danza?</label>
+                <select id="compromiso" name="compromiso" required>
+                    <option value="bajo">Bajo</option>
+                    <option value="medio">Medio</option>
+                    <option value="alto">Alto</option>
+                </select>
+
+                <!-- Días preferidos -->
+                <label for="dias">¿Cuáles días prefieres para las clases? (Puedes seleccionar más de uno):</label><br>
+                <input type="checkbox" id="lunes" name="dias" value="lunes"> <label for="lunes">Lunes</label><br>
+                <input type="checkbox" id="martes" name="dias" value="martes"> <label for="martes">Martes</label><br>
+                <input type="checkbox" id="miercoles" name="dias" value="miercoles"> <label for="miercoles">Miércoles</label><br>
+                <input type="checkbox" id="jueves" name="dias" value="jueves"> <label for="jueves">Jueves
+```
